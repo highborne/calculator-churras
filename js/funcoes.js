@@ -20,30 +20,29 @@ function calcular() {
         <div class="row">
           <div class="carne col-md-3 col-sm-12">
             <p>Carne</p>
+            <i class="fas fa-bacon"></i>
             <p class="tipo">${quantidade_carne} KG</p>
           </div>
           <div class="carne col-md-3 col-sm-12">
             <p>Vegetais</p>
+            <i class="fas fa-seedling"></i>
             <p class="tipo">${quantidae_vegetais} KG</p>
           </div>
           <div class="carne col-md-3 col-sm-12">
             <p>Cerveja</p>
+            <i class="fas fa-beer"></i>
             <p class="tipo">${quatidade_cerveja} Latas</p>
           </div>
           <div class="carne col-md-3 col-sm-12">
             <p>Refrigerante</p>
+            <i class="fas fa-wine-bottle"></i>
             <p class="tipo">${quatidade_refri} Litros</p>
           </div>
         </div>
-
-
         `
-
-
     }
 
   resultado.innerHTML = html;
-
 }
 
 
