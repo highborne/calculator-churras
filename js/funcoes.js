@@ -44,23 +44,3 @@ function calcular() {
 
   resultado.innerHTML = html;
 }
-
-
-
-function cria_cards(jsonObj){
-        var quartos = jsonObj;
-        var html = "";
-        console.log(quartos);
-
-        for(i = 0; i < quartos.length; i++){
-          html +=`
-          <div class="item">
-                  <img class="img" src="${quartos[i].photo}">
-                  <p class="tipo">${quartos[i].property_type}</p>
-                  <p class="nome">${quartos[i].name}</p>
-                  <p class="preco">${quartos[i].price}</p>
-          </div>`
-                  console.log(html)
-      }
-      section.innerHTML = html;
-    }
