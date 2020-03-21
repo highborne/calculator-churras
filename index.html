@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css" >
+    <link rel="shortcut icon" href="src/knife_icon.svg">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -16,20 +17,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/JavaScript" language="JavaScript" src="js/funcoes.js"></script>
     <script src="https://kit.fontawesome.com/eae6a221e9.js" crossorigin="anonymous"></script>
-    
+
     <title>Churras Calculator</title>
   </head>
   <body>
+    <div class="text-center header">
+      <h1>CHURRAS CALCULATOR</h1><i class="fas fa-calculator"></i>
+      <div class="banner">
+
+      </div>
+    </div>
     <div class="container text-center">
-        <h1>Churras Calculator</h1>
-        <form>
-          <div class="row text-left">
-            <div class="col-md-6 col-sm-12">
+      <form>
+          <div class="row conteudo text-left">
+            <div class="col-md-4 col-sm-12">
               <label for="exampleFormControlInput1">Quantas pessoas vem no Churras</label>
-              <input type="number" class="form-control" id="quantidade_pessoas" placeholder="Quantidade de Pessoas.">
+              <input type="number" class="form-control" id="quantidade_pessoas" placeholder="0" required="true" value="0">
             </div>
-            <div class="col-md-6 col-sm-12">
-              <label for="exampleFormControlSelect1">Quantas horas vai durar</label>
+            <div class="col-md-4 col-sm-12">
+              <label for="exampleFormControlInput1">Quantos vegetarianos?</label>
+              <input type="number" class="form-control" id="quantidade_vegetarianos" placeholder="0" required="true" value="0">
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <label for="exampleFormControlSelect1">Quantas horas vai durar?</label>
                   <select class="form-control" id="tempo_churrasco">
                     <option>1</option>
                     <option>2</option>
@@ -39,20 +49,44 @@
                     <option>6</option>
                     <option>7</option>
                     <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
                   </select>
             </div>
           </div>
-          <div class="row text-left">
-            <div class="col-md-6 col-sm-12">
-              <label for="exampleFormControlInput1">Quantos vegetarianos?</label>
-              <input type="number" class="form-control" id="quantidade_vegetarianos" placeholder="Vegetarianos">
-            </div>
+          <div class="row botao text-center">
             <div class="col-md-12 col-sm-12">
                <input type="submit" onclick="calcular();" value="Calcular!!!" />
             </div>
           </div>
         </form>
-        <div class="resultado"></div>
+      <div class="resultado">
+        <p class="titulo">Quanto Comprar!!!</p>
+        <div class="row">
+          <div class="item col-md-3 col-sm-12">
+            <i class="fas fa-bacon"></i>
+            <p class="item_titulo">Carne (Kg)</p>
+            <p class="valor" id="carne"></p>
+          </div>
+          <div class="item col-md-3 col-sm-12">
+            <i class="fas fa-seedling"></i>
+            <p class="item_titulo">Vegetais (Kg)</p>
+            <p class="valor" id="vegetal"></p>
+          </div>
+          <div class="item col-md-3 col-sm-12">
+            <i class="fas fa-beer"></i>
+            <p class="item_titulo">Cerveja (Latas)</p>
+            <p class="valor" id="cerveja"></p>
+          </div>
+          <div class="item col-md-3 col-sm-12">
+            <i class="fas fa-wine-bottle"></i>
+            <p class="item_titulo">Refrigerante (Litros)</p>
+            <p class="valor" id="refri"></p>
+          </div>
+        </div>
       </div>
+    </div>
   </body>
 </html>
