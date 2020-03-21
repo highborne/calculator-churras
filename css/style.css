@@ -1,3 +1,7 @@
-.h1{
+.teste_classe{
   color: red !important;
+  background-color: green;
+  width: 100%;
+  min-height: 200px;
+
 }
